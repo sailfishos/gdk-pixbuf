@@ -1,0 +1,3 @@
+[submodule "gdk-pixbuf"]
+	path = gdk-pixbuf
+	url = https://git.sailfishos.org/mirror/gdk-pixbuf
