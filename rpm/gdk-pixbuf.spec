@@ -1,10 +1,10 @@
 Name:           gdk-pixbuf
-Version:        2.38.1
+Version:        2.42.6
 Release:        1
 Summary:        An image loading library
 License:        LGPLv2+
 URL:            http://www.gtk.org
-Source0:        http://download.gnome.org/sources/gdk-pixbuf/2.38/gdk-pixbuf-%{version}.tar.xz
+Source0:        gdk-pixbuf-%{version}.tar.xz
 
 BuildRequires:  gettext
 BuildRequires:  pkgconfig(gio-2.0)
