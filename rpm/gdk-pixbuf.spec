@@ -53,8 +53,7 @@ the functionality of the installed %{name} package.
 %build
 %meson -Dbuiltin_loaders=png \
        -Ddocs=false \
-       -Dman=false \
-       -Dx11=false
+       -Dman=false
 
 %global _smp_mflags -j1
 %meson_build
