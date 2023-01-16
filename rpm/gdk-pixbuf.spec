@@ -1,5 +1,5 @@
 Name:           gdk-pixbuf
-Version:        2.42.6
+Version:        2.42.10
 Release:        1
 Summary:        An image loading library
 License:        LGPLv2+
