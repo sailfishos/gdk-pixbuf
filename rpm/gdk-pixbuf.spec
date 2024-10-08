@@ -63,17 +63,13 @@ the functionality of the installed %{name} package.
 
 touch $RPM_BUILD_ROOT%{_libdir}/gdk-pixbuf-2.0/2.10.0/loaders.cache
 
-(cd $RPM_BUILD_ROOT%{_bindir}
- mv gdk-pixbuf-query-loaders gdk-pixbuf-query-loaders-%{__isa_bits}
-)
-
 %find_lang gdk-pixbuf
 
 %transfiletriggerin -- %{_libdir}/gdk-pixbuf-2.0/2.10.0/loaders
-gdk-pixbuf-query-loaders-%{__isa_bits} --update-cache
+gdk-pixbuf-query-loaders --update-cache
 
 %transfiletriggerpostun -- %{_libdir}/gdk-pixbuf-2.0/2.10.0/loaders
-gdk-pixbuf-query-loaders-%{__isa_bits} --update-cache
+gdk-pixbuf-query-loaders --update-cache
 
 %post -p /sbin/ldconfig
 
@@ -88,7 +84,7 @@ gdk-pixbuf-query-loaders-%{__isa_bits} --update-cache
 %dir %{_libdir}/gdk-pixbuf-2.0/2.10.0
 %dir %{_libdir}/gdk-pixbuf-2.0/2.10.0/loaders
 %ghost %{_libdir}/gdk-pixbuf-2.0/2.10.0/loaders.cache
-%{_bindir}/gdk-pixbuf-query-loaders-%{__isa_bits}
+%{_bindir}/gdk-pixbuf-query-loaders
 %{_bindir}/gdk-pixbuf-thumbnailer
 %{_datadir}/thumbnailers/
 
