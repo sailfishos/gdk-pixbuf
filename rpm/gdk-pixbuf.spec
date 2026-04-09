@@ -1,9 +1,9 @@
 Name:           gdk-pixbuf
-Version:        2.42.10
+Version:        2.44.6
 Release:        1
 Summary:        An image loading library
 License:        LGPLv2+
-URL:            http://www.gtk.org
+URL:            https://github.com/sailfishos/gdk-pixbuf
 Source0:        gdk-pixbuf-%{version}.tar.xz
 
 BuildRequires:  gettext
@@ -51,9 +51,12 @@ the functionality of the installed %{name} package.
 %setup -q -n %{name}-%{version}/%{name}
 
 %build
-%meson -Dbuiltin_loaders=png \
-       -Ddocs=false \
-       -Dman=false
+%meson -Dandroid=disabled \
+       -Dbuiltin_loaders=png \
+       -Ddocumentation=false \
+       -Dglycin=disabled \
+       -Dman=false \
+       -Dthumbnailer=enabled
 
 %global _smp_mflags -j1
 %meson_build
